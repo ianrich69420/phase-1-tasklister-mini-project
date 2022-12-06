@@ -10,6 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function addToDo (task) {
     let p = document.createElement("p")
     p.textContent = `${task}`
-    document.querySelector("#list").appendChild("p")
+    document.querySelector("#tasks").appendChild("p")
   }
 });
