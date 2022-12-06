@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   // your code here
-  document.querySelector('form').addEventListener("submit", (e) => e.preventDefault())
+  const form = document.querySelector('form')
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    addToDo(e.target.new_task_description.value);
+    e.target.reset();
+  });
+
+  function addToDo (task) {
+    let p = document.createElement("p")
+    p.textContent = `${task}`
+    document.querySelector("#list").appendChild("p")
+  }
 });
